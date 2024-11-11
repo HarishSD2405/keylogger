@@ -1,6 +1,6 @@
-Public IP Address : 152.52.100.226
+Public IP Address : 182.74.172.122
 Processor : Intel64 Family 6 Model 154 Stepping 4, GenuineIntel
 System : Windows 10.0.22631
 Machine : AMD64
 Hostname : DESKTOP-ONOVHFR
-Private IP Adrress : 10.123.41.32
+Private IP Adrress : 10.56.20.210
